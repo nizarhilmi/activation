@@ -100,17 +100,15 @@ $(document).ready(function() {
         confirmPassword: confirmPassword
       };
       $.ajax({
-        url: 'https://localhost:5001/UserAccout/activate',
+        url: 'http://localhost:5000/UserAccout/activate',
         method: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json',
         success: function(response) {
           console.log(response);
-          alert('successfully');
         },
         error: function(xhr, status, error) {
           console.log(xhr.responseText);
-          alert('Error: ' + status + error);
         }
       });
     });
